@@ -1,0 +1,1 @@
+/home/jann_marc/Documents/repositories/personal/journey-to-oxidation/1.3/hello_cargo/target/debug/hello_cargo: /home/jann_marc/Documents/repositories/personal/journey-to-oxidation/1.3/hello_cargo/src/main.rs
