@@ -1,15 +1,10 @@
 fn main() {
-    println!("Hello, world!");
-    new_func(69, '😎');
+    // let y = new_func();
 
-    let y = {
-        let x = 3;
-        x + 1
-    };
-
-    println!("The value of y is: {y}");
+    println!("The value of y is: {}", new_func());
 }
 
-fn new_func(x: u8, emoji: char) {
-    println!("I like {x}. I am {emoji}");
+fn new_func() -> u32 {
+    let x = 5;
+    return x;
 }
