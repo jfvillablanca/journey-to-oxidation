@@ -1,6 +1,19 @@
+use std::io::{self, Write};
+
 fn main() {
-    let temperature_fahrenheit = 69.0;
-    
+    print!("Enter temperature in Fahrenheit: ");
+    io::stdout().flush().unwrap();
+
+    let mut temperature_fahrenheit = String::new();
+    io::stdin()
+        .read_line(&mut temperature_fahrenheit)
+        .expect("Invalid input");
+
+    let temperature_fahrenheit: f64 = temperature_fahrenheit
+                                        .trim()
+                                        .parse()
+                                        .expect("Please type a number");
+
     println!("Temperature in Celsius: {}", convert_f_to_c(temperature_fahrenheit));
 }
 
