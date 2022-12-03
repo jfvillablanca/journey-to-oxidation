@@ -1,10 +1,13 @@
-fn main() {
-    // let y = new_func();
-
-    println!("The value of y is: {}", new_func());
+fn f(x: i32) -> i32 {
+    x + 1
 }
 
-fn new_func() -> u32 {
-    let x = 5;
-    return x;
+fn main() {
+    println!(
+        "{}",
+        f({
+            let y = 1;
+            y + 1
+        })
+    );
 }
