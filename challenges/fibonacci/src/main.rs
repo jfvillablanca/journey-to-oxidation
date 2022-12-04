@@ -1,5 +1,5 @@
 fn main() {
-    let fibonacci_n: i32 = 2;
+    let fibonacci_n: u32 = 10;
     println!(
         "Fibonacci number at N = {} is {}",
         fibonacci_n,
@@ -7,18 +7,23 @@ fn main() {
     );
 }
 
-fn fibonacci_seeker(n: i32) -> u32 {
-    let n: i32 = n - 2;
-    let mut counter: i32 = 0;
+fn fibonacci_seeker(n: u32) -> u32 {
+    let mut counter: u32 = 3;
     let mut fibonacci_i: u32 = 0;
     let mut fibonacci_j: u32 = 1;
-    let mut fibonacci_k: u32 = 0;
+    let mut fibonacci_k;
     let result = loop {
-        counter += 1;
-        if counter >= n {
-            break fibonacci_k;
-        }
         fibonacci_k = fibonacci_i + fibonacci_j;
+        if counter == n {
+            break fibonacci_k;
+        } 
+        counter += 1;
+        if n == 1 {
+            break fibonacci_i;
+        }
+        if n == 2 {
+            break fibonacci_j;
+        }
         fibonacci_i = fibonacci_j;
         fibonacci_j = fibonacci_k;
     };
