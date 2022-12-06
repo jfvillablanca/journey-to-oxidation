@@ -1,7 +1,6 @@
 fn main() {
-    let mut s = String::from("hello");
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
 
-    s.push_str(", world!"); // push_str() appends a literal to a String
-
-    println!("{}", s); // This will print `hello, world!`
+    println!("s1 = {}, s2 = {}", s1, s2);
 }
